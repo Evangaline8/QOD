@@ -45,7 +45,8 @@ html {
   -ms-text-size-adjust: 100%; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  color: #00cc00; }
 
 article,
 aside,
@@ -221,6 +222,34 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: '../../Exo';
+  src: url("../../Exo-LightItalic.eot");
+  src: url("../../Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../Exo-LightItalic.woff2") format("woff2"), url("../../Exo-LightItalic.woff") format("woff"), url("../../Exo-LightItalic.ttf") format("truetype"), url("../../Exo-LightItalic.svg#Exo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: '../../Exo';
+  src: url("../../Exo-Light.eot");
+  src: url("../../Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../Exo-Light.woff2") format("woff2"), url("../../Exo-Light.woff") format("woff"), url("../../Exo-Light.ttf") format("truetype"), url("../../Exo-Light.svg#Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: '../../Exo';
+  src: url("../../Exo-Medium.eot");
+  src: url("../../Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../Exo-Medium.woff2") format("woff2"), url("../../Exo-Medium.woff") format("woff"), url("../../Exo-Medium.ttf") format("truetype"), url("../../Exo-Medium.svg#Exo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: '../../Exo';
+  src: url("../../Exo-MediumItalic.eot");
+  src: url("../../Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../Exo-MediumItalic.woff2") format("woff2"), url("../../Exo-MediumItalic.woff") format("woff"), url("../../Exo-MediumItalic.ttf") format("truetype"), url("../../Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -229,8 +258,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #00cc00;
+  font-family: "Exo";
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -349,9 +378,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border-color: #00cc00 #00cc00 #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #00cc00;
+  /* box shadows button try deleting one of them */
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
@@ -385,7 +415,7 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: #666;
-  border: 1px solid #ccc;
+  border: 1px solid #00cc00;
   border-radius: 3px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -411,9 +441,9 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #00cc00; }
   a:visited {
-    color: purple; }
+    color: #fff; }
   a:hover, a:focus, a:active {
     color: midnightblue; }
   a:focus {
@@ -428,7 +458,6 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -549,6 +578,20 @@ a {
 # Content
 --------------------------------------------------------------*/
 /* Posts and pages */
+.site-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; }
+  .site-content:before {
+    font-family: "FontAwesome";
+    content: "\f10d";
+    font-size: 10rem;
+    float: left; }
+  .site-content:after {
+    font-family: "FontAwesome";
+    content: "\f10e";
+    font-size: 10rem;
+    float: right; }
+
 .sticky {
   display: block; }
 
@@ -592,7 +635,8 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 body {
-  background: black;
+  background: #222222;
+  color: #00cc00;
   color: white; }
 
 /* All Archives Page */
