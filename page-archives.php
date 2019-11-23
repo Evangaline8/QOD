@@ -29,7 +29,8 @@ get_header(); ?>
 
             <div class="category-archives clearfix">
                <h2>Categories</h2>
-               <ul>
+               
+               <ul class="list-archive">
                   <?php wp_list_categories('title_li='); ?>
                </ul>
             </div>

@@ -1,12 +1,14 @@
 html {
-	font-family: sans-serif;
+	font-family:'Exo' ;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
 
 body {
 	margin: 0;
-	color:#00cc00; 
+	color:white; 
+	width:100%;
+	margin: auto 0;
 }
 
 article,
@@ -16,9 +18,17 @@ figcaption,
 figure,
 footer,
 header,
-main,
+main{
+	float:right;
+}
 menu,
-nav,
+nav{
+display:flex;
+flex-direction: column;
+border-style: solid;
+border-width:2px;
+border-color: red;
+}
 section,
 summary {
 	display: block;

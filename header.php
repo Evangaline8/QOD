@@ -18,7 +18,11 @@
 
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
-			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
+			<a href="<?php echo home_url(); ?>">
+				<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/qod-logo.svg " />
+			</a>
+		
+		<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
 
 
